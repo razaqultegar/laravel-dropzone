@@ -1,15 +1,3 @@
-<div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px;">
-
-  <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo">
-  </a>
-
-  <a href="https://dropzone.dev" target="_blank">
-    <img src="https://raw.githubusercontent.com/dropzone/dropzone/assets/github-logo.svg" width="400" alt="Dropzone Logo">
-  </a>
-
-</div>
-
 # Laravel Dropzone
 
 A clean and modular backend implementation of [Dropzone](https://dropzone.dev) file upload system for Laravel applications. This package is designed to help Laravel developers easily integrate Dropzone's file upload capabilities — including chunk uploads — into their applications without reinventing the wheel.
@@ -28,10 +16,36 @@ Out of the box, it provides:
 - Flexible to extend or override based on your business logic.
 - Simple configuration and zero-boilerplate setup.
 
-## Credits
+## Installation
 
-- [Razaqul Tegar](https://github.com/razaqultegar)
-- [All Contributors](../../contributors)
+Require the package using Composer:
+
+```bash
+composer require razaqultegar/laravel-dropzone
+```
+
+Publish the configuration and migration files using the Artisan vendor:publish command:
+
+```bash
+php artisan vendor:publish --tag=dropzone
+```
+
+_*This will create `config/dropzone.php` and `database/migrations/xxxx_xx_xx_xxxxxx_create_dropzones_table.php`_
+
+After publishing, run the migration to create the dropzones table:
+
+```bash
+php artisan migrate
+```
+
+## Quickstart (Coming Soon)
+
+More usage instructions will be added soon for:
+
+- Upload controller
+- Chunk handler
+- Retrieving file metadata
+- Moving to permanent storage
 
 ## License
 
